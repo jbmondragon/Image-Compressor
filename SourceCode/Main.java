@@ -111,7 +111,7 @@ public class Main implements ActionListener {
 
             case "O P E N":
                 File selectedFile;
-                JFileChooser fileChooser = new JFileChooser("C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\Data");
+                JFileChooser fileChooser = new JFileChooser("Data");
                 int result = fileChooser.showOpenDialog(null);
                 if (result == JFileChooser.APPROVE_OPTION) {
                     selectedFile = fileChooser.getSelectedFile();
@@ -120,7 +120,7 @@ public class Main implements ActionListener {
                         JOptionPane.showMessageDialog(null, "Invalid file type! Please select a MMT file.", "Error", JOptionPane.ERROR_MESSAGE);
                     }else if(selectedFile.getAbsolutePath().toLowerCase().endsWith(".mmt")&&selectedFile!=null){
                         try {
-                            String fileName = "C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\Data\\pixel_data.txt";
+                            String fileName = "Data/pixel_data.txt";
                             
                             try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
                                 width = Integer.parseInt(reader.readLine().trim());

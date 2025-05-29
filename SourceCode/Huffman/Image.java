@@ -17,8 +17,8 @@ public class Image {
     int count=0;
 
     //Absolute path hit extracted pixel
-    File outputFile = new File("C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\Data\\pixel_data.txt");
-    String convertedFile = new String("C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\Data\\convertedImage.png");
+    File outputFile = new File("Data/pixel_data.txt");
+    String convertedFile = new String("Data/convertedImage.png");
     Map<String, Integer> hexFrequencyMap = new HashMap<>();
     int width, height;
     String imagePath;
@@ -51,7 +51,7 @@ public void ViewImage() {
 
     //kanan pag select han image na ig c-compress
     public void selectImage() {
-        JFileChooser fileChooser = new JFileChooser("C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\TrialImage\\Pixel Redundancy Approach");
+        JFileChooser fileChooser = new JFileChooser("TrialImage/Pixel Redundancy Approach");
         fileChooser.setDialogTitle("Select an Image");
 
         

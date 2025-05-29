@@ -11,12 +11,12 @@ public class HuffmanCompression {
     Map<String, String> huffmanMap; 
     Map<String, String> reverseHuffmanMap ;
     JLabel imageLabel; 
-    String outputFileName = "C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\Data\\compressed_output.MMT";
+    String outputFileName = "Data/compressed_output.MMT";
     
 
     //kanan pag track hit huffman tree, important ine for compressing and decompressing
     public void readFile() {
-        String fileName = "C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\Data\\huffman_tree.HUFF"; 
+        String fileName = "Data/huffman_tree.HUFF"; 
         huffmanMap= new HashMap<>();
         reverseHuffmanMap= new HashMap<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
@@ -39,7 +39,7 @@ public class HuffmanCompression {
 
     //kanan pag translate han pixel data from hexcode to .something na file
     public void compressImage() {
-        String inputFileName = "C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\Data\\pixel_data.txt";
+        String inputFileName = "Data/pixel_data.txt";
     
 
     try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName));

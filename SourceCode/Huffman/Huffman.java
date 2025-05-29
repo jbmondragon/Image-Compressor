@@ -11,7 +11,7 @@ public class Huffman {
 
     Image extraxtHexCode = new Image();
     Map<String, String> huffmanMap = new HashMap<>();
-    String treePath = "C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\Data\\huffman_tree.HUFF";
+    String treePath = "Data/huffman_tree.HUFF";
 
     Node root;
     private PriorityQueue<Node> createNode(String[] hexCode, int[] hexCodeFreq, int n) {

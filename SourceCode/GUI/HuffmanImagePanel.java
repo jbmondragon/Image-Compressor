@@ -8,7 +8,7 @@ public class HuffmanImagePanel extends JPanel {
 
     public HuffmanImagePanel() {
         setLayout(new BorderLayout()); 
-        image = new ImageIcon("C:\\Users\\jbmon\\OneDrive\\Desktop\\Kinit-main\\SourceCode\\placeholder.png");
+        image = new ImageIcon("SourceCode/placeholder.png");
 
         if (image.getIconWidth() == -1) {
             System.out.println("Image not found or invalid file path.");
