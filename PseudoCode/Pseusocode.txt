@@ -1,0 +1,50 @@
+Algorithm dataExtraction
+Begin
+    String line = readFile(inputFile);
+    extractedRGB_values = extractRGB(line);
+    hexcode = convertToHexcode(extractedRGB_values);
+    identify_unique_pixels();
+    create_a_file(hexcode);
+END
+
+Algorithm HuffmanTree
+BEGIN
+
+    FUNCTION createPriorityQueue(hexCodes, frequencies):
+        CREATE minHeap (Priority Queue)
+        FOR each hexCode and frequency:
+            ADD new Node(hexCode, frequency) to minHeap
+        RETURN minHeap
+
+    FUNCTION buildHuffmanTree(minHeap):
+        WHILE minHeap has more than one node:
+            REMOVE two nodes with lowest frequency
+            CREATE parentNode (sum of both frequencies)
+            SET leftChild = firstNode, rightChild = secondNode
+            ADD parentNode to minHeap
+        RETURN last remaining node (Root of Huffman Tree)
+
+    FUNCTION createTree(hexCodes, frequencies):
+        minHeap = createPriorityQueue(hexCodes, frequencies)
+        root = buildHuffmanTree(minHeap)
+        RETURN root
+END
+
+Algorithm DecompressImage(filePath, width, height)
+BEGIN 
+
+    READ compressed file into bitSet
+    INITIALIZE empty image (width, height)
+    SET (x, y) = (0, 0), currentCode = ""
+
+    FOR each bit in bitSet:
+        APPEND bit to currentCode
+        IF currentCode in reverseHuffmanMap:
+            SET pixel (x, y) to RGB from hexCode
+            INCREMENT x, RESET to 0 if x == width, INCREMENT y if needed
+            RESET currentCode
+            EXIT if y == height
+
+    DISPLAY image
+END
+    
