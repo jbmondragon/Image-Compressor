@@ -13,10 +13,6 @@ _This project is developed by **Jake Mondragon**, **Gian Tongzon**, and **Kennet
 - [Methodology](#methodology)  
 - [Algorithm / Design](#algorithm--design)  
 - [Data / Dataset](#data--dataset)  
-- [Results / Analysis](#results--analysis)  
-- [Contributing](#contributing)  
-- [License](#license)  
-- [Contact](#contact)  
 
 ---
 
